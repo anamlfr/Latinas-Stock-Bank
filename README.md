@@ -1,5 +1,11 @@
 # React + Vite
 
+Este repositorio contiene una aplicación hecho en un diseño web responsive. Cree un archivo especial para el inicio de sesión que se encuentra en la carpeta Pages/Review/getStockData.jsx
+
+name: "Ana Alfaro"
+username: "anamlfr"
+pin: "pass23"
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
