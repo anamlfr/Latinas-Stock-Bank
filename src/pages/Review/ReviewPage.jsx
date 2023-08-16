@@ -23,12 +23,12 @@ export function ReviewPage() {
 
     return (
         <div className="review">
-            <h1>Revisión de Acciones</h1>
+            <h2>Revisión de Acciones</h2>
             {loading ? (
-                <p>Cargando datos...</p>
+                <p className="txt-review">Cargando datos...</p>
             ) : (
                 <div>
-                    <table>
+                    <table className="review-action">
                         <thead>
                             <tr>
                                 <th>Nombre de la Acción</th>
@@ -37,13 +37,13 @@ export function ReviewPage() {
                                 <th>Valor de Mercado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="review-data">
                             {stockData.map(stock => (
                                 <tr key={stock.id}>
                                     <td>{stock.name_stock}</td>
                                     <td>{stock.quantity}</td>
-                                    <td>{stock.monetaryValue}</td>
-                                    <td>{stock.quantity * stock.monetaryValue}</td>
+                                    <td>$ {stock.monetaryValue}</td>
+                                    <td>$ {stock.quantity * stock.monetaryValue}</td>
                                 </tr>
                             ))}
                         </tbody>

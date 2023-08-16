@@ -1,7 +1,85 @@
-.buy{
-    background: #fff;
-  border-radius: 10px;
-  padding: 80px 10px;
+.sell{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+  gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 75rem;
+  max-height: 150vh;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+.sell h2{
+  color: #525050;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sell-select ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sell-select h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.sell-select li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.sell-select li:hover {
+  background-color: #f0f0f0;
+}
+
+.sell-selected-stock {
+  margin-top: 20px;
+}
+
+.sell-selected-stock h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.sell-selected-stock p {
+  margin-bottom: 5px;
+}
+
+.sell-selected-stock input[type="number"] {
+  width: 100px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1f1f1f;
+  border-radius: 5px;
+}
+
+.sell-selected-stock button {
+  padding: 10px 20px;
+  background-color: #8052ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sell-selected-stock button:hover {
+  background-color: #8052ab;
+}
+
+
+
+

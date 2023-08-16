@@ -1,5 +1,5 @@
 import "./BuyStyles.css"
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { getStockData } from "../Review/getStockData";
 
 
@@ -17,7 +17,7 @@ export function BuyPage() {
             .catch(error => {
                 console.error("Error al obtener los datos de las acciones:", error);
             });
-    }, []); 
+    }, []);
 
     const handleStockSelect = (stock) => {
         setSelectedStock(stock);
@@ -63,10 +63,11 @@ export function BuyPage() {
 
     return (
         <div className="buy">
-            <h1>Comprar Acciones</h1>
-            <div>
-                <h3>Selecciona una acción</h3>
+            <h2>Comprar Acciones</h2>
+            <div className="buy-select">
                 <ul>
+                    <h3>Selecciona una acción</h3>
+
                     {stockData.map((stock) => (
                         <li key={stock.id} onClick={() => handleStockSelect(stock)}>
                             {stock.name_stock}
@@ -75,7 +76,7 @@ export function BuyPage() {
                 </ul>
             </div>
             {selectedStock && (
-                <div>
+                <div className="buy-selected-stock">
                     <h3>{selectedStock.name_stock}</h3>
                     <p>Precio por Acción: {selectedStock.price}</p>
                     <p>Fondos Disponibles: {userFunds}</p>

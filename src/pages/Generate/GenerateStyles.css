@@ -1,7 +1,62 @@
 .generate{
-    background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
   border-radius: 10px;
-  padding: 80px 10px;
+  padding: 2rem;
+  max-width: 75rem;
+  max-height: 150vh;
+  margin: 0 auto;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+}
+
+.generate h2 {
+  color: #525050;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.user-details h3,
+.stock-details h3,
+.request-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.user-details p,
+.stock-details ul,
+.request-details p {
+  margin-bottom: 5px;
+}
+
+.stock-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stock-details li {
+  margin-bottom: 5px;
+}
+
+.request-details p {
+  margin-bottom: 20px;
+}
+
+.generate button {
+  padding: 10px 20px;
+  background-color: #8052ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.generate button:hover {
+  background-color: #8052ab;
 }

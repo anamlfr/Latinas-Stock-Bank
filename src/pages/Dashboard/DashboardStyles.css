@@ -1,9 +1,21 @@
 .dashboard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   background: #fff;
   border-radius: 10px;
-  padding: 80px 10px;
+  padding: 2rem;
+  max-width: 90vh;
+  max-height: 150vh;
+  margin: 0 auto;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.dashboard h2{
+  color: #525050;
 }
 
 .formulario {
@@ -11,7 +23,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 }
 .data {
   font-family: "Open Sans", sans-serif;
@@ -22,4 +33,17 @@
   padding: 10px;
   margin-bottom: 5px;
   color: #1f1f1f;
+}
+
+.btn-pin{
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #8052ab;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }

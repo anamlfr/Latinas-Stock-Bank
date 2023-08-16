@@ -1,17 +1,4 @@
-h1 {
-  text-align: center;
-  color: #fff;
-}
-h3{
-  text-align: center;
-  color: #525050;
-}
-
-h2{
-  color: #525050;
-}
-
-.center {
+.center-pin{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +14,7 @@ h2{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.data {
+.data-pin{
   font-family: "Open Sans", sans-serif;
   width: 40vh;
   border-radius: 5px;

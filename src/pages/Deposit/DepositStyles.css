@@ -1,7 +1,73 @@
 .deposit{
-    background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
   border-radius: 10px;
-  padding: 80px 10px;
+  padding: 2rem;
+  max-width: 75rem;
+  max-height: 150vh;
+  margin: 0 auto;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+}
+
+.deposit h2 {
+  color: #525050;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.add-funds h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.add-funds input[type="number"] {
+  width: 100px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1f1f1f;
+  border-radius: 5px;
+}
+
+.add-funds button {
+  padding: 10px 20px;
+  background-color: #8052ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-funds button:hover {
+  background-color: #8052ab;
+}
+
+.view-balance {
+  margin-top: 20px;
+}
+
+.view-balance button {
+  padding: 10px 30px;
+  width: 200px; 
+  background-color: #8052ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.view-balance button:hover {
+  background-color: #8052ab;
+}
+
+.view-balance p {
+  margin-top: 10px;
 }

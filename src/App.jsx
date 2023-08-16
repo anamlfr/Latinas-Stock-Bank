@@ -42,7 +42,7 @@ function App() {
             {authenticated && !pinEntered ? (
               <>
                 <WelcomeMessage name={name} />
-                <PinPage onPinSubmit={handlePinSubmit} stockData={stockData}/>
+                <PinPage onPinSubmit={handlePinSubmit} stockData={stockData} />
               </>
             ) : authenticated && pinEntered ? (
               <Redirect to="/dashboard" />
@@ -57,38 +57,37 @@ function App() {
             </div>
           </Route>
           <Route path="/review">
-          <Navbar />
+            <Navbar />
             <div style={{ marginTop: "130px" }}>
               <ReviewPage />
             </div>
-          </Route>       
+          </Route>
           <Route path="/buy">
-          <Navbar />
+            <Navbar />
             <div style={{ marginTop: "130px" }}>
               <BuyPage />
             </div>
           </Route>
           <Route path="/shell">
-          <Navbar />
+            <Navbar />
             <div style={{ marginTop: "130px" }}>
               <ShellPage />
             </div>
-          </Route>  
+          </Route>
           <Route path="/deposit">
-          <Navbar />
+            <Navbar />
             <div style={{ marginTop: "130px" }}>
               <DepositPage />
             </div>
-          </Route>  
+          </Route>
           <Route path="/generate">
-              <Navbar />
+            <Navbar />
+            <div style={{ marginTop: "130px" }}>
               <GeneratePage
                 name={name}
                 username={username}
               />
-           
-
-
+            </div>
           </Route>
 
         </Switch>

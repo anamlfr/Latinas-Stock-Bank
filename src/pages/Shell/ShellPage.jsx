@@ -68,10 +68,10 @@ export function ShellPage(){
     };
 
     return(
-        <div className="buy">
-        <h1>Vender Acciones</h1>
-        <div className="stock-list">
-                <h2>Selecciona una acción para vender:</h2>
+        <div className="sell">
+        <h2>Vender Acciones</h2>
+        <div className="sell-select">
+                <h3>Selecciona una acción para vender:</h3>
                 <ul>
                     {stockData.map(stock => (
                         <li key={stock.id} onClick={() => handleStockSelect(stock)}>
@@ -81,7 +81,7 @@ export function ShellPage(){
                 </ul>
             </div>
             {selectedStock && (
-                <div className="sell-form">
+                <div className="sell-selected-stock">
                     <h2>{selectedStock.name_stock}</h2>
                     <p>Precio por Acción: {selectedStock.price}</p>
                     <p>Cantidad de Acciones en Posesión: {selectedStock.quantity}</p>

@@ -30,7 +30,7 @@ export function DashboardPage() {
 
   return (
     <div className="dashboard">
-      <h1>Cambiar PIN</h1>
+      <h2>Cambiar PIN</h2>
       <form className="formulario" onSubmit={handleSubmit}>
         <input
           className="data"
@@ -48,7 +48,7 @@ export function DashboardPage() {
           onChange={handleNewPinChange}
         />
         <br />
-        <button type="submit">Cambiar PIN</button>
+        <button className="btn-pin" type="submit">Cambiar PIN</button>
       </form>
       {message && (
         <p className={success ? "success" : "error"}>{message}</p>

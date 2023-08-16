@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import "./PinPage.css"
 
 function PinPage({ pin, onPinSubmit, stockData }) {
   const [enteredPin, setEnteredPin] = useState("");
@@ -18,11 +19,15 @@ function PinPage({ pin, onPinSubmit, stockData }) {
   };
 
   return (
-    <div>
-      <h2>Ingresa tu PIN</h2>
+    <div className="center-pin">
       <div>
-        <label>PIN:</label>
-        <input type="password" value={enteredPin} onChange={handlePinChange} />
+        <input 
+        className="data-pin"
+        type="password" 
+        placeholder="Ingrese su PIN"
+        value={enteredPin} 
+        onChange={handlePinChange} 
+        />
       </div>
       <button onClick={handleSubmit}>Continuar</button>
     </div>

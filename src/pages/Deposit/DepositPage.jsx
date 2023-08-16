@@ -2,6 +2,7 @@ import "./DepositStyles.css"
 import React, { useState, useEffect } from "react";
 import { getStockData } from "../Review/getStockData";
 
+
 export function DepositPage() {
     const [stockData, setStockData] = useState([]);
     const [userFunds, setUserFunds] = useState(2800);
@@ -29,9 +30,9 @@ export function DepositPage() {
 
     return (
         <div className="deposit">
-            <h1>Depositar Acciones</h1>
+            <h2>Depositar Acciones</h2>
             <div className="add-funds">
-                <h2>Agregar Fondos</h2>
+                <h3>Agregar Fondos</h3>
                 <input
                     type="number"
                     value={addedFunds}

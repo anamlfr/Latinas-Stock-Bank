@@ -1,7 +1,51 @@
 .review{
-    background: #fff;
-  border-radius: 10px;
-  padding: 80px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+  gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 75rem;
+  max-height: 150vh;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.review h2{
+  color: #525050;
+}
+
+.txt-review{
+  font-size: 15px;
+}
+
+.review-action{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.review-action td,th{
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+.review-action tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.review-action tr:hover{
+  background-color: #a2a4ce;
+}
+
+.review-action th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(151, 126, 195);
+  color: white;
 }

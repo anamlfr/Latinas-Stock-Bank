@@ -29,16 +29,16 @@ export function GeneratePage({ name, username}) {
 
   return (
     <div className="generate">
-      <h1>Estado de Cuenta</h1>
+      <h2>Estado de Cuenta</h2>
       <div className="user-details">
-        <h2>Detalles del Usuario</h2>
-        <p>Nombre: Ana Alfaro</p>
-        <p>Usuario: anamlfr </p>
+        <h3>Detalles del Usuario</h3>
+        <p>Nombre: Name</p>
+        <p>Usuario: username </p>
         <p>Fondos Disponibles: $2800 </p>
 
       </div>
       <div className="stock-details">
-        <h2>Detalles de Acciones</h2>
+        <h3>Detalles de Acciones</h3>
         <ul>
           {stockData.map(stock => (
             <li key={stock.id}>
@@ -48,7 +48,7 @@ export function GeneratePage({ name, username}) {
         </ul>
       </div>
       <div className="request-details">
-        <h2>Detalles de la Solicitud</h2>
+        <h3>Detalles de la Solicitud</h3>
         <p>Fecha de Solicitud: {currentDate}</p>
       </div>
 
