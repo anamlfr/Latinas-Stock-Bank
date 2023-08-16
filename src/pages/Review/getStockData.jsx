@@ -1,4 +1,4 @@
-const stockData = [
+export const stockData = [
   { id: 1, 
     userId: 1, 
     name: "Ana Alfaro",
@@ -12,8 +12,9 @@ const stockData = [
 
   { id: 2,
     userId: 2, 
-    name: "Alexa Camacho",
+    name: "Alex Camacho",
     username: "alexcamacho", 
+    pin: "pass23", 
     name_stock: "GOOGL", 
     quantity: 5, 
     price: 2800, 

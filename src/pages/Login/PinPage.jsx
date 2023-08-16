@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 
-function PinPage({ pin, onPinSubmit }) {
+function PinPage({ pin, onPinSubmit, stockData }) {
   const [enteredPin, setEnteredPin] = useState("");
 
   const handlePinChange = (event) => {
@@ -8,9 +8,10 @@ function PinPage({ pin, onPinSubmit }) {
   };
 
   const handleSubmit = () => {
-    if (enteredPin === pin) {
-      onPinSubmit();
+    const authenticatedUser = stockData.find(user => user.pin === enteredPin);
 
+    if (authenticatedUser) {
+      onPinSubmit(authenticatedUser);
     } else {
       alert("PIN incorrecto");
     }

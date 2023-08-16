@@ -8,6 +8,7 @@ import { BuyPage } from "./pages/Buy/BuyPage";
 import { ShellPage } from "./pages/Shell/ShellPage";
 import { DepositPage } from "./pages/Deposit/DepositPage";
 import { GeneratePage } from "./pages/Generate/GeneratePage";
+import { stockData, getStockData } from "./pages/Review/getStockData";
 import Navbar from "./components/Navbar"
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
@@ -18,14 +19,15 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [pinEntered, setPinEntered] = useState(false);
 
-  const handleLogin = (enteredName, enteredUsername, enteredUserFunds) => {
-    console.log("Name:", enteredName);
-    console.log("Username:", enteredUsername);
-    console.log("User Funds:", enteredUserFunds);
-    setName(enteredName);
-    setUsername(enteredUsername);
-    setUserFunds(enteredUserFunds);
-    setAuthenticated(true);
+  const handleLogin = (enteredName, enteredUsername) => {
+    const user = stockData.find(user => user.name === enteredName && user.username === enteredUsername);
+
+    if (user) {
+      setName(user.name);
+      setUsername(user.username);
+      setAuthenticated(true);
+    } else {
+    }
   };
 
   const handlePinSubmit = () => {
@@ -40,7 +42,7 @@ function App() {
             {authenticated && !pinEntered ? (
               <>
                 <WelcomeMessage name={name} />
-                <PinPage pin="1234" onPinSubmit={handlePinSubmit} />
+                <PinPage onPinSubmit={handlePinSubmit} stockData={stockData}/>
               </>
             ) : authenticated && pinEntered ? (
               <Redirect to="/dashboard" />

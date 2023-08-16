@@ -2,7 +2,7 @@ import "./GenerateStyles.css"
 import React, { useState, useEffect } from "react";
 import { getStockData } from "../Review/getStockData";
 
-export function GeneratePage({ name, username}) {
+export function GeneratePage({ name, username, userFunds}) {
   const [stockData, setStockData] = useState([]);
   const currentDate = new Date().toLocaleDateString();
 
@@ -25,6 +25,7 @@ export function GeneratePage({ name, username}) {
         <h2>Detalles del Usuario</h2>
         <p>Nombre: {name}</p>
         <p>Usuario: {username}</p>
+        <p>Fondos Disponibles: {userFunds}</p>
       </div>
       <div className="stock-details">
         <h2>Detalles de Acciones</h2>
