@@ -81,13 +81,14 @@ function App() {
             </div>
           </Route>  
           <Route path="/generate">
-          <Navbar />
-            <div style={{ marginTop: "130px" }}>
-              <GeneratePage 
-              name={name}
-              username={username}
-              userFunds={userFunds}/>
-           </div>
+              <Navbar />
+              <GeneratePage
+                name={name}
+                username={username}
+              />
+           
+
+
           </Route>
 
         </Switch>
